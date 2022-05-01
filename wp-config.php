@@ -25,13 +25,13 @@
 
 if(isset($_ENV['JAWSDB_MARIA_URL'])) { 
   $db = parse_url($_ENV['JAWSDB_MARIA_URL']); 
-  var_dump($db);
-  définir('DB_NAME', trim($db['path'],`/`)); 
-  définir('DB_USER', $db['user']); 
-  définir('DB_PASSWORD', $db['pass']); 
-  définir('DB_HOST', $db['hôte']); 
-  définir('DB_CHARSET', 'utf8'); 
-  définir('DB_COLLATE', ''); 
+  //var_dump($db);
+  define('DB_NAME', trim($db['path'],'/')); 
+  define('DB_USER', $db['user']); 
+  define('DB_PASSWORD', $db['pass']); 
+  define('DB_HOST', $db['host']); 
+  define('DB_CHARSET', 'utf8'); 
+  define('DB_COLLATE', ''); 
 } else { 
   die("Pas d'informations d'identification de base de données !"); 
 }
