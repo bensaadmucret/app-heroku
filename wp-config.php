@@ -22,9 +22,9 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-die($_ENV[`JAWSDB_MARIA_URL`]);
-if(isset($_ENV[`JAWSDB_MARIA_URL`])) { 
-  $db = parse_url($_ENV[`JAWSDB_MARIA_URL`]); 
+die($_ENV['JAWSDB_MARIA_URL']);
+if(isset($_ENV['JAWSDB_MARIA_URL'])) { 
+  $db = parse_url($_ENV['JAWSDB_MARIA_URL']); 
   var_dump($db);
   définir('DB_NAME', trim($db[`path`],`/`)); 
   définir('DB_USER', $db[`user`]); 
