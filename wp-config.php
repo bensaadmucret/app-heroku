@@ -24,6 +24,7 @@
 /** Nom de la base de données de WordPress. */
 if(isset($_ENV[`CLEARDB_DATABASE_URL`])) { 
   $db = parse_url($_ENV[`CLEARDB_DATABASE_URL`]); 
+  var_dump($db);
   définir('DB_NAME', trim($db[`path`],`/`)); 
   définir('DB_USER', $db[`user`]); 
   définir('DB_PASSWORD', $db[`pass`]); 
